@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Created by Apoorv Goel"
+    />
+    <script src="https://kit.fontawesome.com/90b77456ee.js" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link href="https://fonts.googleapis.com/css?family=Flamenco" rel="stylesheet">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>NewsHub</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        /* width: 98.06vw; */
+        height: 100vh;
+        /* background-color: #eee; */
+        background-image:linear-gradient(rgba(0, 0, 0, 0.651),rgba(0, 0, 0, 0.651)), url("https://picsum.photos/1920/1080/?random");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+      }
+  
+      body.noscroll{
+        position:fixed;
+        overflow:hidden;
+      }
+  
+      @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700");
+  
+      h1{
+        line-height: 0.5;
+        /* margin-top: 0; */
+        color: #fff;
+        display: inline-block;
+        position: relative;
+      }
+  
+      /* h2{
+        margin-top: 0;
+        color: #fff;
+        display: inline-block;
+        position: relative;
+        align-items: center;
+      } */
+  
+      .tera {
+        font-size: 6.5rem; /* 117 / 18 = 6.5 */
+        margin-bottom: 0.25385rem;
+        /* -webkit-text-stroke: 1.5px #000; */
+      }
+  
+      .epsilon {
+        font-size: 2rem; /* 21 / 18 = 1.1667 */
+        margin-bottom: 1.41429rem;
+        /* -webkit-text-stroke: 1.5px #000; */
+      }
+      /* ==== Typefaces  ==== */
+  
+      .open-sans{font-family: 'Open Sans';}
+  
+      /* ==== Weights, styles, letterspacing, etc. ==== */
+      .bold{font-weight: 650;}
+      .ls-medium{letter-spacing: 3px;}
+      .ls-xlarge{letter-spacing: 10px;}        
+  
+      .background {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      
+      /* .loader-wrapper {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #242f3f;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+      } */
+      .loader {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        border: 4px solid #Fff;
+        animation: loader 2s infinite ease;
+      }
+      .loader-inner {
+        vertical-align: top;
+        display: inline-block;
+        width: 100%;
+        background-color: #fff;
+        animation: loader-inner 2s infinite ease-in;
+      }
+      
+      @keyframes loader {
+        0% { transform: rotate(0deg);}
+        25% { transform: rotate(180deg);}
+        50% { transform: rotate(180deg);}
+        75% { transform: rotate(360deg);}
+        100% { transform: rotate(360deg);}
+      }
+      
+      @keyframes loader-inner {
+        0% { height: 0%;}
+        25% { height: 0%;}
+        50% { height: 100%;}
+        75% { height: 100%;}
+        100% { height: 0%;}
+      }
+
+      @media (max-width: 1140px) {
+        .tera {
+        font-size: 5rem;
+        /* margin-bottom: 0.25385rem; */
+      }
+      .open-sans{font-family: 'Open Sans';}
+      .epsilon {
+        font-size: 1.8rem; /* 21 / 18 = 1.1667 */
+        /* margin-bottom: 1.41429rem; */
+      }
+      .bold{font-weight: 550;}
+      .ls-medium{letter-spacing: 2.5px;}
+      .ls-xlarge{letter-spacing: 7px;}  
+      }
+      @media (max-width: 768px) {
+        .tera {
+        font-size: 4rem;
+        /* margin-bottom: 0.25385rem; */
+      }
+      .open-sans{font-family: 'Open Sans';}
+      .epsilon {
+        font-size: 1.5rem; /* 21 / 18 = 1.1667 */
+        /* margin-bottom: 1.41429rem; */
+      }
+      .bold{font-weight: 450;}
+      .ls-medium{letter-spacing: 2px;}
+      .ls-xlarge{letter-spacing: 6px;}
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+ 
+  </body>
+</html>
