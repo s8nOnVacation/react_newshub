@@ -9,7 +9,7 @@ export const NewsContextProvider = (props) => {
   const [search, setSearchQuery] = useState();
   const [date, setDateQuery] = useState();
 
-  const [url, setUrl] = useState("https://webhose.io/nseFilter?token=05c16f91-2d7c-40f1-ae2f-c0eb2db7d07f&format=json&size=21&article.language:english site.type%3Anews");
+  const [url, setUrl] = useState("https://webhose.io/nseFilter?token=5591bd3a-df1b-4fa9-9bfb-61461c6030e0&format=json&size=21&article.language:english site.type%3Anews");
 
   const findnews = async () => {
     const response = await fetch(url)
@@ -33,16 +33,16 @@ export const NewsContextProvider = (props) => {
   const handleinput = (e) => {
     e.preventDefault()
     console.log(moment(date).valueOf())
-    if (moment(date).valueOf() < moment().valueOf()) { setUrl(`https://webhose.io/nseFilter?token=05c16f91-2d7c-40f1-ae2f-c0eb2db7d07f&format=json&size=21&q=${search} published:>${moment(date).valueOf()} article.language:english site.type%3Anews`) }
-    else { setUrl(`https://webhose.io/nseFilter?token=05c16f91-2d7c-40f1-ae2f-c0eb2db7d07f&format=json&size=21&q=${search} article.language:english site.type%3Anews`) }
+    if (moment(date).valueOf() < moment().valueOf()) { setUrl(`https://webhose.io/nseFilter?token=5591bd3a-df1b-4fa9-9bfb-61461c6030e0&format=json&size=21&q=${search} published:>${moment(date).valueOf()} article.language:english site.type%3Anews`) }
+    else { setUrl(`https://webhose.io/nseFilter?token=5591bd3a-df1b-4fa9-9bfb-61461c6030e0&format=json&size=21&q=${search} article.language:english site.type%3Anews`) }
   }
 
   function topnews(e) {
-    setUrl(`https://webhose.io/nseFilter?token=05c16f91-2d7c-40f1-ae2f-c0eb2db7d07f&format=json&size=21&q=${e} article.language:english site.type%3Anews`)
+    setUrl(`https://webhose.io/nseFilter?token=5591bd3a-df1b-4fa9-9bfb-61461c6030e0&format=json&size=21&q=${e} article.language:english site.type%3Anews`)
   }
 
   function pagerefresh() {
-    setUrl("https://webhose.io/nseFilter?token=05c16f91-2d7c-40f1-ae2f-c0eb2db7d07f&format=json&size=21&article.language:english site.type%3Anews")
+    setUrl("https://webhose.io/nseFilter?token=5591bd3a-df1b-4fa9-9bfb-61461c6030e0&format=json&size=21&article.language:english site.type%3Anews")
   }
 
   function slideshow() {
