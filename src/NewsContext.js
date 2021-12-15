@@ -47,7 +47,7 @@ export const NewsContextProvider = (props) => {
 
   function slideshow() {
     var x = document.getElementById("check-class");
-    if (x.style.display === "block") {
+    if (x.style.display === "block"){
       x.style.display = "none";
       x.style.margin = "2rem auto";
       x.style.right = "2rem";
